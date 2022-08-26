@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <script src="https://kit.fontawesome.com/6d9af59618.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+</head>
+
+<body>    
+    <div class="container">
+        <div class="navbar">
+            <div class="currency">
+                <a href="#">CurrenCy: GBP</a>
+            </div>
+            <div class="nav-items">
+                <div class="nav-item">
+                    <a href="#">Register</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#">Sign In</a>
+
+                </div>
+                <div class="basket">
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i> empty <i
+                            class="fa-solid fa-angle-down"></i></a>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="navbar-light">
+            <div class="navbar-collapsed">
+                <a href=""><i class="fa-solid fa-bars"></i></a>
+            </div>
+            <div class="brand">
+                <h2><b>AVENUE</b> FASHION</h2>
+            </div>
+            <div class="nav-items">
+            <div class="nav-item">
+                <a href="#">Mens<i class="fa-solid fa-angle-down"></i></a>
+                <div class="dropdown">
+                    <div class="tabs">
+                        <div class="tab">
+                            <h3>CASUALS</h3>
+                            <ul>
+                                <li><a href="/">Jackets</a></li>
+                                <li><a href="#">Hoodies@Sweatshirts</a></li>
+                                <li><a href="#">Polo Shirts</a></li>
+                                <li><a href="#">Sportswear</a></li>
+                                <li><a href="#">Trousers & Chinos</a></li>
+                                <li><a href="#">T-shirts</a></li>
+                            </ul>
+    
+                        </div>
+                        <div class="tab">
+                            <h3>FORMAL</h3>
+                            <ul>
+                                <li><a href="#">Jackets</a></li>
+                                <li><a href="#">Shirts</a></li>
+                                <li><a href="#">Suits</a></li>
+                                <li><a href="#">Trousers</a></li>
+    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="discount">
+                        <h2>Autumn Sale!<br> Up TO 50% Off</h2>
+                    </div>
+                </div>
+    
+    
+            </div>
+            <div class="nav-item"><a href="/product">Womens<i class="fa-solid fa-angle-down"></i></a></div>
+            <div class="nav-item"><a href="/the-brand">The Brand</a></div>
+            <div class="nav-item"><a href="/localstores">Local Stores<i class="fa-solid fa-angle-down"></i></a></div>
+            <div class="nav-item"><a href="/lookbook">Look Book<i class="fa-solid fa-angle-down"></i></a></div>
+            </div>
+            <div class="search">
+                <input type="text" name="" id="" placeholder="Search">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+        <% if (param=='normal') { %>
+            
+
+        <%- include('./header-menu') %>
+
+        <% }else{ %>
+                <%- include('./header-menu2',{subtitle:subtitle,subtitle2:subtitle2}) %>
+        <% } %>
+
+
+        
